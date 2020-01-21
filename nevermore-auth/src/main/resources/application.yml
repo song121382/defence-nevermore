@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: nevermore-auth
+  datasource:
+    url: jdbc:mysql://localhost:3306/defence?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true
+    username: root
+    password: root
+
+server:
+  port: 8008
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["beans"]
+
